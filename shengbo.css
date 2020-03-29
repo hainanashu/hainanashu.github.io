@@ -1,0 +1,91 @@
+@import url('reset.import.css');
+html {overflow: auto;}
+body {font-family:'Open Sans','Helvetica Neue','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;color:#383838;background: #f6f6f6;}
+u {border-bottom: 1px solid;text-decoration: none;padding-bottom: .05em;}
+a {color:#0645AD;text-decoration:none;}
+a[rel="external"]:after {display: inline-block;width:10px;height:10px;margin-left:2px;vertical-align:2px;content:"";background-image:url(img/external.png);}
+u {
+  border-bottom: 1px solid;
+  text-decoration: none;
+  padding-bottom: .05em;
+}
+u+u {margin-left:.125em;}
+header {padding:2.5em 0 1.5em;border-bottom: 1px solid #ddd;}
+.page {width:60em;margin:0 auto;padding:5em 0 4em;position:relative;zoom:1;}
+article q {white-space: nowrap;}
+article h2 {font-weight: normal;margin:1em 0;}
+article p {padding-left: 2em;}
+article p:before {display: none}
+article ul,article ol {margin-left:2em;margin-top:1em;}
+article ul {list-style: none;}
+article p, article li {line-height: 2;}
+article sup {font-weight: 700;}
+article .notes {font-size: .875em;}
+blockquote {font-family:"Kaiti";}
+blockquote ul,blockquote ol {list-style-position:inside;}
+.introduction {position: relative;}
+.introduction .avatar {margin:0 0 2em 2em;border:1px solid #ccc;padding:2px;display:inline-block;}
+.introduction .avatar .pic {display:block;width:128px;height:128px;}
+.contact {zoom:1;margin-top:1em;-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;}
+.contact::before,
+.contact::after {content: '';display: table;}
+.contact::after {clear: both;}
+.contact li:first-child {float: left;margin-right: 10px;padding-top: 7px;}
+.contact img {width:50px;height:50px;vertical-align: top;}
+.job {position:relative;padding-left:120px;margin:2em 0;zoom:1;}
+.job .dates {position:absolute;left:0;top:4px;font-size:12px;color:#999;}
+footer {font-size:.75em;margin:3em 0 2em;text-align: center;}
+.copyright {color:#999;margin:0 0 .5em;}
+.actions {position:absolute;right:10px;top:85px;}
+.actions a {color:#555;}
+.actions .print {margin-right:20px;}
+.actions .mail {margin-right:20px;}
+.actions .ico {display:inline-block;width:16px;height:16px;vertical-align:text-bottom;margin-right:3px;}
+.actions .print .ico {background-image:url(img/print.png);}
+.actions .down .ico {background-image:url(img/download.png);}
+.actions .mail .ico {background-image:url(img/mail.png);}
+.actions img {width:16px;}
+
+.explanation {padding:20px;border:1px solid #ddd;}
+.explanation ul {list-style: disc;}
+
+@media only screen and (max-width:768px) {
+  article ul, article ol {margin:0;list-style-position:inside;}
+	.page {margin:0;width:auto;padding:2em 1em;}
+  .job {padding:0;}
+  .job .dates {display:block;position:static;}
+  .introduction .fn {font-size:24px;}
+  .introduction .avatar .pic {width:64px;height:64px;/*-webkit-background-size:cover!important;
+  background-size:cover!important;*/}
+}
+@media only screen and (max-width:320px) and (-webkit-min-device-pixel-ratio:1.5) and (min-resolution:2dppx){
+  .actions {display:none;}
+}
+@media print {
+  body {font-size:14px;color:#000;}
+  blockquote {margin:3em 0 0;}
+  blockquote p {line-height: 1.5;margin:.5em 0 0;}
+  footer {display:none;}
+  .live-city {display:none;}
+  .introduction .avatar {position: absolute;right:0;top:0;margin:0;width:100px;height:128px;overflow: hidden;border:0 none;}
+  .introduction .avatar .pic {position: absolute;left:50%;margin-left:-64px;top:0;}
+  .page {padding:2em 0 0;}
+  .page .fn {font-size:64px;float:left;display: block;margin:0 30px 0 0;line-height: 125%;}
+  .page .fn u {border:0 none;}
+  .page a[rel="external"]:after {display:none;}
+  .page dot {display: none;}
+  .page .job {padding-left: 0;margin:1em 0;}
+  .page .job .org {margin-top:-.6em;}
+  .page .job .dates {display: block;position: static;}
+  .contact {margin:0;}
+  .contact img {width: 42px;height: 42px;}
+  .experience {margin-top:2em;}
+  .description li {line-height: 1.5;margin:.5em 0 0;}
+  .explanation {border-color:#000;}
+  /*.contact li {display: inline-block;width: 30%;}
+  .contact li:first-child {width:50px;}*/
+}
